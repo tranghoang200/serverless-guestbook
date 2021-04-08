@@ -48,7 +48,7 @@ const guestbook = {
       console.log(result);
       
       const context = {
-        entries: result
+        entries: result.rows
       }
       $('#entries').html(entriesTemplate(context));
       console.log(entriesTemplate(context));
