@@ -41,14 +41,14 @@ const guestbook = {
     console.log('Loading entries...');
     $('#entries').html('Loading entries...');
     guestbook.get().done(function(result) {
-//       if (!result.entries) {
-//         return;
-//       }
+      if (!result) {
+        return;
+      }
       
-      console.log(result.entries);
+      console.log(result);
       
       const context = {
-        entries: result.entries
+        entries: result
       }
       $('#entries').html(entriesTemplate(context));
       console.log(entriesTemplate(context));
